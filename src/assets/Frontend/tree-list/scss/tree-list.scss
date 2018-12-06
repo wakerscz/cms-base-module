@@ -1,0 +1,93 @@
+/**
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ */
+
+.wakers_tree_list
+{
+    margin-left: -30px;
+
+    &.break_tree
+    {
+        border: 1px dashed darken($color-white, 30%);
+        margin-left: 0;
+        padding: 20px;
+        width: 100%;
+
+        ul
+        {
+            margin: 0;
+
+            li
+            {
+                margin-left: 0;
+                margin-bottom: 20px;
+
+                &:last-child
+                {
+                    margin-bottom: 0;
+                }
+
+                .inner_container
+                {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    ul
+    {
+        list-style: none;
+        padding-left: 0;
+
+        li
+        {
+            margin-left: 30px;
+
+            .inner_container
+            {
+                display: flex;
+                margin-bottom: 20px;
+
+                .inner_action
+                {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid darken($color-white, 15%);
+                    padding: 0 15px;
+                    border-left: none;
+                    min-width: 70px;
+                    background-color: $color-white;
+                }
+
+                .inner_box
+                {
+                    display: flex;
+                    align-items: center;
+                    padding: 20px;
+                    width: 100%;
+                    border: 1px solid darken($color-white, 15%);
+                    background-color: darken($color-white, 3%);
+                }
+
+                a.inner_box
+                {
+                    text-decoration: none;
+
+                    &:hover,
+                    &:active,
+                    &:focus
+                    {
+                        color: $color-white;
+                        background-color: $color-blue-wk-light;
+                        border-color: $color-blue-wk-light;
+                    }
+                }
+            }
+        }
+    }
+}

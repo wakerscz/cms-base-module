@@ -1,0 +1,101 @@
+/**
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ */
+
+// Růzek pro otevření modálního okna
+.wakers_dashboard_handle
+{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    background-color: $color-blue-wk-light;
+    border-top: 1px solid darken($color-white, 15%);
+    bottom: -35px;
+    right: -35px;
+    z-index: 900;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+
+    &:hover,
+    &:active,
+    &:focus
+    {
+        background-color: darken($color-blue-wk, 20%);
+
+    }
+
+}
+
+.wakers_dashboard
+{
+    .dashboard_boxes
+    {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        margin: 30px -15px 0;
+
+        .dashboard_box
+        {
+            padding: 0 15px;
+            width: 100%;
+
+            @media (min-width: $modal-screen-sm-min)
+            {
+                width: 50%;
+            }
+
+            @media (min-width: $modal-screen-lg-min)
+            {
+                width: percentage(1/3);
+            }
+
+            a
+            {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                min-height: 100px;
+                color: $color-blue-wk-light;
+                background-color: $color-white;
+                padding: 20px;
+                text-align: center;
+                margin-bottom: 30px;
+                cursor: pointer;
+                text-decoration: none;
+                border: 2px solid $color-blue-wk-light;
+                -webkit-transition: all 300ms ease;
+                -moz-transition: all 300ms ease;
+                -ms-transition: all 300ms ease;
+                -o-transition: all 300ms ease;
+                transition: all 300ms ease;
+
+                &.current_settings
+                {
+                    color: $color-white;
+                    background-color: $color-blue-wk-light;
+                }
+
+                &:hover,
+                &:active,
+                &:focus
+                {
+                    color: $color-white;
+                    background-color: $color-blue-wk;
+                }
+            }
+
+        }
+    }
+
+}

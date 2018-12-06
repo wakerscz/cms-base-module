@@ -1,0 +1,35 @@
+/**
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ */
+
+.page_in_progress
+{
+    @extend .h-75;
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+
+    &.todo
+    {
+        @extend .text-success;
+    }
+
+    .page_in_progress_title
+    {
+        text-align: center;
+        margin-top: 5rem;
+
+        h2
+        {
+            @extend .display-4;
+        }
+
+        p
+        {
+            @extend .lead;
+        }
+    }
+}

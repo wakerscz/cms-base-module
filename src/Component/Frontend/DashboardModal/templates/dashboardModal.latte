@@ -1,0 +1,23 @@
+{**
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ *}
+
+{if $user->isAllowed(Wakers\BaseModule\Security\BaseAuthorizator::RES_DASHBOARD_MODAL)}
+    <div class="wakers_dashboard_handle"></div>
+
+    <div class="wakers_modal" id="wakers_base_dashboard_modal">
+
+        <div class="modal_title">
+            <a href="#" class="close" data-wakers-modal-close>&#x2715</a>
+            Wakers CMS 5.0 - Dashboard ({$presenter->template->langEntity->getName()})
+        </div>
+
+        {foreach $dashboardPaths as $dashboard}
+            {include $dashboard->getPathname()}
+        {/foreach}
+
+    </div>
+{/if}

@@ -1,0 +1,60 @@
+/**
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ */
+
+// Paths
+$tmp-images-path: '/temp/static/image';
+$tmp-fonts-path: '/temp/static/font';
+$tmp-images-path: '/temp/static/image';
+
+// Font Awesome - font path
+$fa-font-path: $tmp-fonts-path;
+
+
+// Brands color
+$color-blue-wk:         #00b0f0;
+$color-blue-wk-light:   #4dc5f2;
+
+
+// Colors
+$color-white:           #ffffff;
+$color-gray:            #333333;
+$color-red:             #ca2121;
+$color-green:           #29b87e;
+
+
+// Modal - screen sizes
+$modal-screen-sm-min: 660px;
+$modal-screen-md-min: 840px;
+$modal-screen-lg-min: 1020px;
+$modal-screen-xl-min: 1200px;
+
+$modal-screen-sm-max: $modal-screen-sm-min - 1;
+$modal-screen-md-max: $modal-screen-md-min - 1;
+$modal-screen-lg-max: $modal-screen-lg-min - 1;
+$modal-screen-xl-max: $modal-screen-xl-min - 1;
+
+$modal-md-width: 800px;
+$modal-lg-width: 950px;
+$modal-xl-width: 1100px;
+
+
+// Notifications Lobibox colors
+$notify-gray-lighter:   #cccccc;
+$notify-brand-danger:   #ca2121;
+$notify-brand-success:  #29b87e;
+$notify-brand-warning:  #ce812e;
+$notify-brand-info:     #2e79b4;
+$notify-color-confirm:  #3c2d2d;
+
+
+// Progress button
+$progress-button-color: $color-white;
+$progress-button-bg-color: $color-blue-wk;
+
+
+// Animate.scss
+$use-all: true;

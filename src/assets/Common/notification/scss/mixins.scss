@@ -1,0 +1,84 @@
+/**
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * Tento soubor je přepsán z originálního LESS formátu do SCSS
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ */
+
+@mixin lobibox-size($width, $height)
+{
+    width: $width;
+    height: $height;
+}
+
+@mixin lobibox-square($size)
+{
+    @include lobibox-size($size, $size);
+}
+
+@mixin lobibox-alert-variant($border, $header-color, $header-bg, $icon-color, $footer-bg)
+{
+    border: $border;
+
+    .lobibox-header
+    {
+        color: $header-color;
+        background-color: $header-bg;
+    }
+
+    .lobibox-body
+    {
+        .lobibox-icon
+        {
+            color: $icon-color;
+        }
+    }
+
+    .lobibox-footer
+    {
+        background-color: $footer-bg;
+    }
+}
+
+@mixin lobibox-notify-variant($bg, $color)
+{
+    border-color: darken($bg, 5%);
+    background-color: $bg;
+    color: $color;
+
+    &:hover
+    {
+        background-color: $bg;
+        border-color: darken($color, 60%);
+    }
+}
+
+@mixin lobibox-tab-control-variant($bg)
+{
+    background-color: fade-out($bg, 0.1);
+    border-color: darken($bg, 3%);
+
+    &:hover
+    {
+        background-color: $bg;
+        border-color: darken($bg, 5%);
+    }
+}
+
+@mixin lobibox-box-shadow($box-shadow)
+{
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+}
+
+@mixin lobibox-transition($transition)
+{
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}

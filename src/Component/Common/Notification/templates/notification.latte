@@ -1,0 +1,21 @@
+{*
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ *}
+
+<script n:if="count($presenter->template->flashes) > 0">
+    $(function ()
+    {
+        {foreach $presenter->template->flashes as $notification}
+
+            $.notification(
+                {$notification->type},
+                {$notification->title},
+                {$notification->message}
+            );
+
+        {/foreach}
+    });
+</script>

@@ -1,0 +1,23 @@
+{**
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author David Kolář
+ *
+ *}
+
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        {foreach $breadcrumb as $path}
+            <li class="breadcrumb-item active" aria-current="page">
+                {ifset $path['link']}
+                    <a href="{plink $path['link']}" title="{$path['title']}">
+                {/ifset}
+                    {$path['title']}
+                {ifset $path['link']}
+                    </a>
+                {/ifset}
+            </li>
+        {/foreach}
+    </ol>
+</nav>

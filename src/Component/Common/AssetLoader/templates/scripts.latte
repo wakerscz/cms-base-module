@@ -1,0 +1,16 @@
+{*
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ *}
+
+{if $module === 'siteManager'}
+    <script src="{$baseUrl}/{$assets['js']['siteManager']}"></script>
+{else}
+    <script src="{$baseUrl}/{$assets['js']['frontend']}"></script>
+
+    {if $user->isAllowed(Wakers\BaseModule\Security\BaseAuthorizator::RES_IN_PAGE_MANAGER)}
+        <script src="{$baseUrl}/{$assets['js']['inPageManager']}"></script>
+    {/if}
+{/if}

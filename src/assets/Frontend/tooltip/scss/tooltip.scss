@@ -1,0 +1,71 @@
+/**
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ */
+
+[data-wakers-tooltip]
+{
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    outline: 0;
+
+    &:before,
+    &:after
+    {
+        visibility: hidden;
+        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+        filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=0)';
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &:before
+    {
+        z-index: 1000;
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        margin-bottom: -5px;
+        margin-left: -60px;
+        padding: 10px;
+        width: 120px;
+        background-color: transparentize($color-gray, 0.3);
+        color: $color-white;
+        content: attr(data-wakers-tooltip);
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.2;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    &:after
+    {
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -5px;
+        margin-bottom: -10px;
+        width: 0;
+        border-top: 5px solid transparentize($color-gray, 0.3);
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        content: " ";
+        font-size: 0;
+        line-height: 0;
+    }
+
+    &:hover:before,
+    &:hover:after
+    {
+        visibility: visible;
+        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+        filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=100)';
+        opacity: 1;
+    }
+}

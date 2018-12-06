@@ -1,0 +1,33 @@
+parameters:
+    acl:
+        - Wakers\BaseModule\Security\BaseAuthorizator
+
+services:
+
+    # Builders
+    - Wakers\BaseModule\Builder\AclBuilder\AclBuilderFactory::build(%acl%)
+
+    # Repositories
+    - Wakers\BaseModule\Repository\NavBarRepository(%adminNavBar%)
+    - Wakers\BaseModule\Repository\DashboardRepository(%frontendDashboard%)
+    - Wakers\BaseModule\Repository\AssetLoaderRepository
+
+    # Components
+    - Wakers\BaseModule\Component\Admin\NavBar\INavBar
+    - Wakers\BaseModule\Component\Admin\BreadCrumb\IBreadcrumb
+
+    - Wakers\BaseModule\Component\Common\AssetLoader\IAssetLoader
+    - Wakers\BaseModule\Component\Common\Notification\INotification
+
+    - Wakers\BaseModule\Component\Frontend\DashboardModal\IDashboardModal
+
+latte:
+    macros:
+        - Wakers\BaseModule\Macro\Image
+        - Wakers\BaseModule\Macro\File
+
+
+extensions:
+    wakers-propel: Wakers\Propel\DI\PropelExtension
+    sessionPanel: Kdyby\SessionPanel\DI\SessionPanelExtension
+    console: Kdyby\Console\DI\ConsoleExtension

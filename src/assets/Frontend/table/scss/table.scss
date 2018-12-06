@@ -1,0 +1,55 @@
+/**
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ */
+
+.wakers_table
+{
+    font-size: 14px;
+
+    @media (max-width: $modal-screen-md-max)
+    {
+        overflow-x: auto;
+    }
+
+    table
+    {
+        width: 100%;
+
+        thead
+        {
+            tr
+            {
+                th
+                {
+                    padding: 15px;
+                    text-align: left;
+                }
+            }
+        }
+
+        tbody
+        {
+            tr
+            {
+                td
+                {
+                    border-top: 1px solid darken($color-white, 10%);
+                    padding: 15px;
+
+                    &.actions
+                    {
+                        min-width: 155px;
+                    }
+
+                    &.text_right
+                    {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}

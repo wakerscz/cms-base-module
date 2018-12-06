@@ -1,0 +1,52 @@
+/**
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ */
+
+[data-wakers-progress-button].disabled
+{
+    animation: bg-progress 500ms infinite;
+    -moz-animation: bg-progress 500ms infinite; /* Firefox */
+    -webkit-animation: bg-progress 500ms infinite; /* Safari and Chrome */
+    background-image: linear-gradient(-45deg, lighten($progress-button-bg-color, 25%), $progress-button-bg-color, lighten($progress-button-bg-color, 25%), $progress-button-bg-color);
+    color: $progress-button-color;
+    background-size: 400% 400%;
+}
+
+@-webkit-keyframes bg-progress {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes bg-progress {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes bg-progress {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}

@@ -1,0 +1,92 @@
+/**
+ * For the full copyright and license information, please view the license.md.
+ * Copyright (c) 2018 Faculty of Education - University of South Bohemia in České Budějovice
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ */
+
+.navbar
+{
+    padding: 0 1rem;
+    background: linear-gradient(to bottom right, $color-blue-wk, $color-blue-wk-light);
+
+    @include media-breakpoint-down(lg)
+    {
+        padding: 0.5rem 1rem;
+    }
+
+    a
+    {
+        font-size: 14px;
+        color: $color-white;
+        @include transition(all 150ms ease);
+    }
+
+    .navbar-brand
+    {
+        font-size: 20px;
+    }
+
+    .navbar-toggler
+    {
+        color: $color-white;
+        border: 1px solid $color-white;
+    }
+
+    .navbar-collapse
+    {
+        @include media-breakpoint-down(lg)
+        {
+            margin-top: 1rem;
+        }
+
+        .nav-item
+        {
+            .nav-link
+            {
+                padding: 1rem;
+                color: $color-white;
+
+                @include media-breakpoint-down(lg)
+                {
+                    background-color: lighten($color-blue-wk, 10%);
+                }
+            }
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active
+            {
+                .nav-link
+                {
+                    background-color: darken($color-blue-wk, 10%);
+                }
+            }
+        }
+
+        .dropdown-menu
+        {
+            background-color: $color-blue-wk;
+            border: 1px solid $color-blue-wk;
+            margin: 0;
+            padding: 0;
+
+            .dropdown-item
+            {
+                margin: 0;
+                padding: 0.75rem 1rem;
+
+                &:hover,
+                &:focus,
+                &:active,
+                &.active
+                {
+                    background-color: darken($color-blue-wk, 10%);
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}

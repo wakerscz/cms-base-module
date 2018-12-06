@@ -1,0 +1,41 @@
+{**
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ *}
+<!DOCTYPE html>
+<html lang="cs" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="noindex,nofollow">
+
+    <title n:snippet="pageTitle">{ifset title}{include title|stripHtml} | {/ifset}Site Manager</title>
+
+    {block styles}
+        {control baseAssetLoader 'styles.latte', 'siteManager'}
+    {/block}
+</head>
+<body class="h-100">
+
+{if $presenter->isLinkCurrent(':User:Admin:Login') === FALSE}
+    {control baseNavBar}
+{/if}
+
+{include content}
+
+{block scripts}
+    {control baseAssetLoader 'scripts.latte', 'siteManager'}
+    {control baseNotification}
+    <script n:syntax="off">$(function(){$.run()})</script>
+{/block}
+
+{* modals *}
+{block modal}{/block}
+
+</body>
+</html>
+
+
+

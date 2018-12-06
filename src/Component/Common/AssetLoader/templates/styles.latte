@@ -1,0 +1,18 @@
+{*
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ *}
+
+<link rel="shortcut icon" href="{$baseUrl}/temp/static/image/favicon.ico">
+
+{if $module === 'siteManager'}
+    <link rel="stylesheet" type="text/css" href="{$baseUrl}/{$assets['css']['siteManager']}">
+{else}
+    <link rel="stylesheet" type="text/css" href="{$baseUrl}/{$assets['css']['frontend']}">
+
+    {if $user->isAllowed(Wakers\BaseModule\Security\BaseAuthorizator::RES_IN_PAGE_MANAGER)}
+        <link rel="stylesheet" type="text/css" href="{$baseUrl}/{$assets['css']['inPageManager']}">
+    {/if}
+{/if}

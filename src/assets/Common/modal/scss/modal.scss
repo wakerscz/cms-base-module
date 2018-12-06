@@ -1,0 +1,193 @@
+/**
+ * Copyright (c) 2018 Wakers.cz
+ *
+ * @author Jiří Zapletal (http://www.wakers.cz, zapletal@wakers.cz)
+ *
+ */
+
+*,
+*:before,
+*:after
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wakers_modal_overflow
+{
+    overflow: hidden;
+}
+
+.wakers_modal_overlay
+{
+    position: fixed;
+    background-color: transparentize($color-blue-wk, 0.25);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.wakers_modal
+{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background-color: transparentize($color-white, 0.02);
+    padding: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-left: 1px solid darken($color-white, 20%);
+    width: 100%;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    z-index: 1000;
+    color: lighten($color-gray, 20%);
+
+    a
+    {
+        text-decoration: none;
+    }
+
+
+    .color_green
+    {
+        color: $color-green;
+    }
+
+    .color_red
+    {
+        color: $color-red;
+    }
+
+    @media (min-width: $modal-screen-sm-min)
+    {
+        max-width: $modal-md-width;
+    }
+
+    @media (min-width: $modal-screen-lg-min)
+    {
+        max-width: $modal-lg-width;
+    }
+
+    @media (min-width: $modal-screen-xl-min)
+    {
+        max-width: $modal-xl-width;
+    }
+
+    a
+    {
+        color: $color-blue-wk-light;
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+
+        &:hover,
+        &:active,
+        &:focus
+        {
+            color: $color-blue-wk;
+        }
+    }
+
+    img
+    {
+        max-width: 100%;
+        border: 1px solid darken($color-white, 30%);
+    }
+
+    .modal_title
+    {
+        position: relative;
+        color: $color-blue-wk-light;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 30px;
+        border-bottom: 1px solid $color-blue-wk-light;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+
+        .close
+        {
+            display: flex;
+            position: absolute;
+            color: $color-white;
+            background-color: darken($color-white, 15%);
+            right: 0;
+            top: 0;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            -webkit-transition: all 400ms ease;
+            -moz-transition: all 400ms ease;
+            -ms-transition: all 400ms ease;
+            -o-transition: all 400ms ease;
+            transition: all 400ms ease;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 10;
+
+            @media (max-width: $modal-screen-sm-max)
+            {
+                position: fixed;
+                top: auto;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            &:hover,
+            &:active,
+            &:focus
+            {
+                background-color: $color-blue-wk-light;
+            }
+        }
+    }
+
+    .modal_subtitle
+    {
+        font-size: 26px;
+        font-weight: 700;
+        border-bottom: 1px dashed darken($color-white, 20%);
+        padding: 15px 0;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    .modal_info
+    {
+        margin-bottom: 30px;
+    }
+
+    &.modal_open
+    {
+        right: 0;
+
+        .modal_title
+        {
+            .close
+            {
+                display: flex;
+                opacity: 1;
+            }
+        }
+    }
+}
