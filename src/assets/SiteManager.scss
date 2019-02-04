@@ -7,24 +7,16 @@
 
 // Globální variables
 @import "Common/_variables/scss/variables";
-@import "SiteManager/_variables/scss/variables";
 
-// Notifikace
-@import "Common/notification/scss/variables";
-@import "Common/notification/scss/mixins";
-@import "Common/notification/scss/animations";
-@import "Common/notification/scss/notifications";
-
-// Progress button
-@import "Common/progress-button/scss/progress-button";
-
-// Fotm Awesome 4.7
-@import "~font-awesome/scss/font-awesome";
+// Font Awesome 5.7.1
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+$fa-font-path: $tmp-fonts-path;
 
 // Bootstrap 4
 @import "~bootstrap/scss/functions";
-//@import "~bootstrap/scss/variables";
-@import "SiteManager/bootstrap/scss/variables";
+@import "~bootstrap/scss/variables";
+@import "SiteManager/_variables/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
@@ -59,8 +51,15 @@
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
 
+
+// Notifikace
+@import "Common/notification/scss/variables";
+@import "Common/notification/scss/mixins";
+@import "Common/notification/scss/animations";
+@import "Common/notification/scss/notifications";
+
+// Progress button
+@import "Common/progress-button/scss/progress-button";
+
 // NavBar
 @import "SiteManager/navbar/scss/navbar";
-
-// Stránky jsou v přípravě
-@import "SiteManager/page-in-progress/scss/page-in-progress";
