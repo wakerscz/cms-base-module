@@ -234,7 +234,7 @@ class ProtectedFile
             throw new InvalidArgumentException("One of this parameters: 'size-width' or 'size-height' is required.");
         }
 
-        if (!array_search($cropType, self::CROP_TYPES))
+        if (!in_array($cropType, self::CROP_TYPES))
         {
             $allowedArguments = implode(', ', self::CROP_TYPES);
             throw new InvalidArgumentException("Argument \$cropType '{$cropType}' is invalid. Allowed arguments are '{$allowedArguments}'");
