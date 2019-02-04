@@ -40,7 +40,7 @@ $(function ()
     });
 
     var openedModals = [];
-    var zIndex = 1000;
+    var zIndex = 4990;
 
     $.fn.wakersModal = function (toggle)
     {
