@@ -50,7 +50,6 @@ $(function ()
 
                 $.nette.ajax(
                 {
-                    request,
                     //cache: false,
                     //contentType: false,
                     processData: false,
