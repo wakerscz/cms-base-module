@@ -13,7 +13,7 @@ namespace Wakers\BaseModule\Component\Admin\BreadCrumb;
 use Wakers\BaseModule\Component\Admin\BaseControl;
 
 
-class Breadcrumb extends BaseControl
+class BreadCrumb extends BaseControl
 {
     /**
      * Render

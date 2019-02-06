@@ -13,18 +13,18 @@ namespace Wakers\BaseModule\Component\Admin\BreadCrumb;
 trait Create
 {
     /**
-     * @var IBreadcrumb
+     * @var IBreadCrumb
      * @inject
      */
-    public $IBase_Breadcrumb;
+    public $IBase_BreadCrumb;
 
 
     /**
      * Komponenta pro zobrazení cestičky
-     * @return Breadcrumb
+     * @return BreadCrumb
      */
-    protected function createComponentBaseBreadcrumb() : object
+    protected function createComponentBaseBreadCrumb() : object
     {
-        return $this->IBase_Breadcrumb->create();
+        return $this->IBase_BreadCrumb->create();
     }
 }

@@ -14,7 +14,7 @@ services:
 
     # Components
     - Wakers\BaseModule\Component\Admin\NavBar\INavBar
-    - Wakers\BaseModule\Component\Admin\BreadCrumb\IBreadcrumb
+    - Wakers\BaseModule\Component\Admin\BreadCrumb\IBreadCrumb
 
     - Wakers\BaseModule\Component\Common\AssetLoader\IAssetLoader
     - Wakers\BaseModule\Component\Common\Notification\INotification

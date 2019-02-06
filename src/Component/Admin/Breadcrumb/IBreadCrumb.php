@@ -10,10 +10,10 @@
 namespace Wakers\BaseModule\Component\Admin\BreadCrumb;
 
 
-interface IBreadcrumb
+interface IBreadCrumb
 {
     /**
-     * @return Breadcrumb
+     * @return BreadCrumb
      */
-    public function create() : Breadcrumb;
+    public function create() : BreadCrumb;
 }
