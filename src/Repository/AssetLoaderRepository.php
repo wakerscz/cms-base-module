@@ -55,15 +55,15 @@ class AssetLoaderRepository
 
         return [
             'css' => [
-                'inPageManager' => self::REL_CSS_PATH . $files['inPageManager.css'],
-                'siteManager' => self::REL_CSS_PATH . $files['siteManager.css'],
-                'frontend' => self::REL_CSS_PATH . $files['frontend.css']
+                'inPageManager' => self::REL_CSS_PATH . $files['sys-inpage-manager-build.css'],
+                'siteManager' => self::REL_CSS_PATH . $files['sys-site-manager-build.css'],
+                'frontend' => self::REL_CSS_PATH . $files['sys-frontend-build.css']
             ],
 
             'js' => [
-                'inPageManager' => self::REL_JS_PATH . $files['inPageManager.js'],
-                'siteManager' => self::REL_JS_PATH . $files['siteManager.js'],
-                'frontend' => self::REL_JS_PATH . $files['frontend.js']
+                'inPageManager' => self::REL_JS_PATH . $files['sys-inpage-manager-build.js'],
+                'siteManager' => self::REL_JS_PATH . $files['sys-site-manager-build.js'],
+                'frontend' => self::REL_JS_PATH . $files['sys-frontend-build.js']
             ]
         ];
     }
