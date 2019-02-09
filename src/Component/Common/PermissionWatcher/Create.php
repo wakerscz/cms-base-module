@@ -12,7 +12,6 @@ namespace Wakers\BaseModule\Component\Common\PermissionWatcher;
 
 use Nette\Application\ForbiddenRequestException;
 use Wakers\BaseModule\Presenter\BaseAdminPresenter;
-use Wakers\LangModule\Translator\Translate;
 use Wakers\PageModule\Presenter\FrontendPresenter;
 use Wakers\UserModule\Database\User;
 use Wakers\UserModule\Repository\UserRepository;

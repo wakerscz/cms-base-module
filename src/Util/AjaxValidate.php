@@ -12,7 +12,6 @@ namespace Wakers\BaseModule\Util;
 
 use Nette\Application\UI\Form;
 use Wakers\BaseModule\Presenter\BaseAdminPresenter;
-use Wakers\LangModule\Translator\Translate;
 use Wakers\PageModule\Presenter\FrontendPresenter;
 
 
