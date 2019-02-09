@@ -12,7 +12,6 @@ namespace Wakers\BaseModule\Component\Common\Logout;
 
 use Nette\Security\User;
 use Wakers\BaseModule\Presenter\BaseAdminPresenter;
-use Wakers\LangModule\Translator\Translate;
 use Wakers\PageModule\Presenter\FrontendPresenter;
 
 
@@ -20,7 +19,6 @@ use Wakers\PageModule\Presenter\FrontendPresenter;
  * @property-read BaseAdminPresenter
  * @property-read FrontendPresenter
  * @property-read User $user
- * @property-read Translate $translate
  */
 trait CreateHandleLogout
 {
@@ -35,8 +33,8 @@ trait CreateHandleLogout
             $this->user->logout(TRUE);
 
             $this->notification(
-                $this->translate->translate('Logout'),
-                $this->translate->translate('You have successfully logged out.'),
+                'Odhlášení',
+                'Byli jste úspěšně odhlášeni.',
                 'success'
             );
 

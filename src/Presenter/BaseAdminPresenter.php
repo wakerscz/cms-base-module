@@ -14,7 +14,6 @@ use Nette\Application\ForbiddenRequestException;
 use Nette\Application\UI\Presenter;
 use Wakers\BaseModule\Security\BaseAuthorizator;
 use Wakers\LangModule\Repository\LangRepository;
-use Wakers\LangModule\Translator\Translate;
 use Wakers\UserModule\Repository\UserRepository;
 
 
@@ -44,13 +43,6 @@ abstract class BaseAdminPresenter extends Presenter
 
 
     /**
-     * @var Translate
-     * @inject
-     */
-    public $translate;
-
-
-    /**
      * @throws ForbiddenRequestException
      * @throws \Nette\Application\AbortException
      * @throws \Nette\Application\UI\InvalidLinkException
@@ -74,8 +66,8 @@ abstract class BaseAdminPresenter extends Presenter
         if($this->isLinkCurrent(':User:Admin:Login') === FALSE && $isAllowed === FALSE)
         {
             $this->notification(
-                $this->translate->translate('Access denied'),
-                $this->translate->translate('Please login to access the administration.'),
+                "Přístup zamítnut",
+                "Pro přístup do administrace se prosím přihlašte.",
                 'warning'
             );
 

@@ -21,7 +21,6 @@ use Wakers\UserModule\Repository\UserRepository;
  * @property-read BaseAdminPresenter|FrontendPresenter $presenter
  * @property-read \Nette\Security\User $user
  * @property-read UserRepository $userRepository
- * @-property-read Translate $translate
  */
 trait Create
 {
@@ -58,8 +57,8 @@ trait Create
                 $this->user->logout(TRUE);
 
                 $this->notification(
-                    $this->translate->translate('Logout'),
-                    $this->translate->translate('Your permissions has been changed, just try to log-in now.'),
+                    'Odhlášení',
+                    'Vaše oprávněná byla upravena, pokuste se přihlásit znovu.',
                     'warning'
                 );
 

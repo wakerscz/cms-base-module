@@ -31,11 +31,7 @@ trait AjaxValidate
         {
             foreach ($form->getErrors() as $error)
             {
-                $this->presenter->notificationAjax(
-                    $this->presenter->translate->translate('Error'),
-                    $error,
-                    'error'
-                );
+                $this->presenter->notificationAjax('Chyba', $error, 'error');
             }
         }
     }
