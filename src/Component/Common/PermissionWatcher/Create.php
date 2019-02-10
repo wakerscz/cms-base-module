@@ -58,7 +58,7 @@ trait Create
 
                 $this->notification(
                     'Odhlášení',
-                    'Vaše oprávněná byla upravena, pokuste se přihlásit znovu.',
+                    'Vaše oprávnění bylo upraveno, pokuste se přihlásit znovu.',
                     'warning'
                 );
 
