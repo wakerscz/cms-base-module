@@ -36,6 +36,15 @@
 
 .wakers_dashboard
 {
+    .dashboard_main_links a
+    {
+        @media (max-width: $modal-screen-sm-max)
+        {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
     .dashboard_boxes
     {
         display: flex;

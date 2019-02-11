@@ -39,7 +39,7 @@
     right: -100%;
     bottom: 0;
     background-color: transparentize($color-white, 0.02);
-    padding: 50px;
+    padding: 50px 15px;
     overflow-x: hidden;
     overflow-y: auto;
     border-left: 1px solid darken($color-white, 20%);
@@ -70,6 +70,7 @@
 
     @media (min-width: $modal-screen-sm-min)
     {
+        padding: 50px;
         max-width: $modal-md-width;
     }
 

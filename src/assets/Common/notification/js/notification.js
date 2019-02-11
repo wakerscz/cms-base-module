@@ -13,7 +13,7 @@ $(function ()
         //iconSource: 'fontAwesome',
         icon: false,
         sound: 'sound4',
-        width: 320,
+        width: 300,
         height: null,
         pauseDelayOnHover: true,
         continueDelayOnInactiveTab: false
