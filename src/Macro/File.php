@@ -40,7 +40,7 @@ class File extends UIMacros
     {
         return $writer->write('   
               $wakers_file = %node.array;
-              echo LR\Filters::escapeHtmlText($baseUrl);
+              echo LR\Filters::escapeHtmlText($basePath);
               echo ($wakers_file[0])->getPublicFile();
         ');
     }

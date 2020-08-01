@@ -5,14 +5,14 @@
  *
  *}
 
-<link rel="shortcut icon" href="{$baseUrl}/temp/static/image/favicon.ico">
+<link rel="shortcut icon" href="{$basePath}/temp/static/image/favicon.ico">
 
 {if $module === 'siteManager'}
-    <link rel="stylesheet" type="text/css" href="{$baseUrl}/{$assets['css']['siteManager']}">
+    <link rel="stylesheet" type="text/css" href="{$basePath}/{$assets['css']['siteManager']}">
 {else}
-    <link rel="stylesheet" type="text/css" href="{$baseUrl}/{$assets['css']['frontend']}">
+    <link rel="stylesheet" type="text/css" href="{$basePath}/{$assets['css']['frontend']}">
 
     {if $user->isAllowed(Wakers\BaseModule\Security\BaseAuthorizator::RES_IN_PAGE_MANAGER)}
-        <link rel="stylesheet" type="text/css" href="{$baseUrl}/{$assets['css']['inPageManager']}">
+        <link rel="stylesheet" type="text/css" href="{$basePath}/{$assets['css']['inPageManager']}">
     {/if}
 {/if}

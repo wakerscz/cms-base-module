@@ -40,7 +40,7 @@ class Image extends UIMacros
     {
         return $writer->write('   
               $wakers_img = %node.array;
-              echo LR\Filters::escapeHtmlText($baseUrl);
+              echo LR\Filters::escapeHtmlText($basePath);
               echo ($wakers_img[0])->getPublicImage($wakers_img[1], $wakers_img[2]);
         ');
     }

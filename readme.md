@@ -102,7 +102,7 @@ $protectedFile->setAttr('title', $title);
 
 {* nebo *}
 
-<a href="{$baseUrl . $protectedFile->getFile()}">Odkaz na soubor</a>
+<a href="{$basePath . $protectedFile->getFile()}">Odkaz na soubor</a>
 
 
 {* Makro img vytvoří oříznutý obrázek a vrátí cestu k souboru
@@ -112,7 +112,7 @@ $protectedFile->setAttr('title', $title);
 
 {* nebo *}
 
-<img src="{$baseUrl . $protectedFile->getPublicImage('1200xNULL', 'SHRINK_ONLY')}" title="{$protectedFile->getAttr('title')}">
+<img src="{$basePath . $protectedFile->getPublicImage('1200xNULL', 'SHRINK_ONLY')}" title="{$protectedFile->getAttr('title')}">
 
 
 {* Vypíše pouze, pokud existuje privátní soubor - nevytváří tedy šedý obrázek *}

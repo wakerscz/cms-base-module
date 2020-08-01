@@ -6,11 +6,11 @@
  *}
 
 {if $module === 'siteManager'}
-    <script src="{$baseUrl}/{$assets['js']['siteManager']}"></script>
+    <script src="{$basePath}/{$assets['js']['siteManager']}"></script>
 {else}
-    <script src="{$baseUrl}/{$assets['js']['frontend']}"></script>
+    <script src="{$basePath}/{$assets['js']['frontend']}"></script>
 
     {if $user->isAllowed(Wakers\BaseModule\Security\BaseAuthorizator::RES_IN_PAGE_MANAGER)}
-        <script src="{$baseUrl}/{$assets['js']['inPageManager']}"></script>
+        <script src="{$basePath}/{$assets['js']['inPageManager']}"></script>
     {/if}
 {/if}
